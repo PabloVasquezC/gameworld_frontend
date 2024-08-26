@@ -14,16 +14,18 @@ const NavBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="#link" className='text-white'>Productos</Nav.Link>
             <Nav.Link href="#link" className='text-white'>Ofertas</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown" className='text-white'>
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+            <NavDropdown title="Más" id="basic-nav-dropdown">
+              <div className='action-style'>
+              <NavDropdown.Item href="#action/3.1" className='action-style'>Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" className='action-style'>
                 Another action
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3" className='action-style'>Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              </div>
+              {/* <NavDropdown.Item href="#action/3.4" className='action-style'>
                 Separated link
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

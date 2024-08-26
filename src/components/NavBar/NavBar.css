@@ -4,8 +4,15 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow:0px 5px 10px #6e42c191;
+
+    .action-style {
+        background-color: #222;
+        border-bottom: 1px solid #6e42c1;
+        color: white;
+    }
 }
 
 .bg-purple {
-    background-color: #6f42c1;
+    background: linear-gradient(#6e42c191, #6e42c1);
 }
