@@ -2,9 +2,9 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <button className="btn btn-primary">Primary Button</button>
-    </div>
+    <>
+      <h1>Hola Mundo!</h1>
+    </>
   );
 }
 
