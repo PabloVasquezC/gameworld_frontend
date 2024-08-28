@@ -3,10 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavBar.css';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-purple navbar d-flex">
+    <Navbar expand="lg" className="bg-purple navbar ">
       <Container>
         <Navbar.Brand href="#home" className='text-white'>GameWorld</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
@@ -22,11 +23,14 @@ const NavBar = () => {
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3" className='action-style'>Something</NavDropdown.Item>
               <NavDropdown.Divider />
-              </div>
-              {/* <NavDropdown.Item href="#action/3.4" className='action-style'>
-                Separated link
-              </NavDropdown.Item> */}
+              </div> 
             </NavDropdown>
+            <Nav.Link>
+              Log in
+            </Nav.Link>
+            <Nav.Link>
+              Sign up
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
