@@ -1,18 +1,15 @@
-import './App.css'
-import Spinner from './components/Spinner/Spinner';
+import React from 'react';
 import NavBar from './components/NavBar/NavBar';
-import './App.css'; 
 import Login from './components/Login/Login';
-
+import HomePage from './components/HomePage/HomePage';
 
 function App() {
   return (
-    <>
-      <Spinner />
-      <NavBar />
-      <Login />
-    </>
-  );
+		<>
+		  <NavBar />
+			<HomePage />
+		</>
+	);
 }
 
-export default App
+export default App;
