@@ -5,15 +5,8 @@
     width: 100%;
     z-index: 1000;
     box-shadow:0px 5px 10px #6e42c191;
-    height: 50px;
+    height: auto;
 
-    .action-style {
-        background-color: #222;
-        border-bottom: 1px solid #6e42c1;
-        color: white;
-    }
+    
 }
 
-.bg-purple-gradient {
-    background: linear-gradient(#6e42c191, #6e42c1);
-}
