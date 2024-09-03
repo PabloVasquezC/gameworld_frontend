@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import NavBar from '../NavBar/NavBar'
+import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 
 
 
@@ -76,9 +77,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Game world
-            </h1>
+            <img 
+                src={Logo} 
+                alt="GameWorld Logo" 
+                className="h-80 w-auto " 
+              />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Productos de calidad para gente de calidad.
             </p>

@@ -12,6 +12,10 @@
   }
   ```
 */
+
+import NavBar from "../NavBar/NavBar"
+
+
 const products = [
     {
       id: 1,
@@ -22,11 +26,77 @@ const products = [
       price: '$35',
       color: 'Black',
     },
+    {
+      id: 2,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of men's Basic Tee in gray.",
+      price: '$35',
+      color: 'Charcoal',
+    },
+    {
+      id: 1,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Black',
+    },
+    {
+      id: 2,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of men's Basic Tee in gray.",
+      price: '$35',
+      color: 'Charcoal',
+    },
+    {
+      id: 1,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Black',
+    },
+    {
+      id: 2,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of men's Basic Tee in gray.",
+      price: '$35',
+      color: 'Charcoal',
+    },
+    {
+      id: 1,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$35',
+      color: 'Black',
+    },
+    {
+      id: 2,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of men's Basic Tee in gray.",
+      price: '$35',
+      color: 'Charcoal',
+    }
+    
     // More products...
   ]
   
   export default function Example() {
     return (
+      <>
+      <NavBar />
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
@@ -58,6 +128,7 @@ const products = [
           </div>
         </div>
       </div>
+      </>
     )
   }
   
