@@ -93,7 +93,7 @@ const products = [
     // More products...
   ]
   
-  export default function Example() {
+  export default function ProductCard() {
     return (
       <>
       <NavBar />

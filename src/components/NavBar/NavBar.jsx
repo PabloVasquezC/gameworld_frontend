@@ -6,8 +6,9 @@ import './NavBar.css'
 const navigation = [
   { name: 'Inicio', href: '/', current: false },
   { name: 'Productos', href: '/productCard', current: false },
-  { name: 'Login', href: '/login', current: false },
-  
+  { name: 'Login', href: '/login', current: false }, 
+  { name: 'Registro', href: '/signup', current: false },
+  { name: 'Nuestro Equipo', href: '/ourTeam', current: false },
 ]
 
 function classNames(...classes) {
