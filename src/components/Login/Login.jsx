@@ -18,7 +18,7 @@ const Login = () => {
         <img 
                 src={Logo} 
                 alt="GameWorld Logo" 
-                className="h-80 w-80 " 
+                className="h-80 w-80 mx-auto" 
               />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Ingresa a tu cuenta

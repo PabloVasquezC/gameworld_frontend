@@ -1,13 +1,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
+import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 
 const navigation = [
-  { name: 'Inicio', href: '/', current: false },
+  { name: 'Registro', href: '/signUp', current: false },
   { name: 'Productos', href: '/productCard', current: false },
   { name: 'Login', href: '/login', current: false }, 
-  { name: 'Registro', href: '/signup', current: false },
   { name: 'Nuestro Equipo', href: '/ourTeam', current: false },
 ]
 
@@ -31,14 +31,16 @@ export default function NavBar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
+              <Link to="/">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                src={Logo}
+                className="h-14 w-auto"
               />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mt-3">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
