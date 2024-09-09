@@ -21,13 +21,40 @@ function SignUp() {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validatePasswords()) {
-      // Aquí va la lógica para enviar los datos al servidor si la validación es exitosa
-      console.log('Formulario enviado');
+      const userData = {
+        username: e.target.username.value,
+        password: password,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        address: e.target.address.value,
+      };
+  
+      try {
+        const response = await fetch('http://localhost:8000/api/register/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data.message);
+        } else {
+          const errorData = await response.json();
+          console.error(errorData.error);
+          setError(errorData.error);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
   };
+  
 
     return (
         <>

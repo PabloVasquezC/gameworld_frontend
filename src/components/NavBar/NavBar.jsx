@@ -6,7 +6,7 @@ import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 
 const navigation = [
   { name: 'Registro', href: '/signUp', current: false },
-  { name: 'Productos', href: '/productCard', current: false },
+  { name: 'Productos', href: '/productsPage', current: false },
   { name: 'Login', href: '/login', current: false }, 
   { name: 'Nuestro Equipo', href: '/ourTeam', current: false },
 ]
