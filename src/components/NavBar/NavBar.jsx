@@ -3,6 +3,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
 import Logo from '../../assets/gameworld_logo-removebg-preview.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'  // Asegúrate de que faUser esté importado correctamente
 
 const navigation = [
   { name: 'Registro', href: '/signUp', current: false },
@@ -17,9 +19,9 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 w-full navbar">
+    <Disclosure as="nav" className="bg-gray-800 w-full navbar flex">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-16 bg-black  items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -41,6 +43,7 @@ export default function NavBar() {
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4 mt-3">
+
                 {navigation.map((item) => (
                   <NavLink
                     key={item.name}
@@ -56,11 +59,15 @@ export default function NavBar() {
                     {item.name}
                   </NavLink>
                 ))}
+
               </div>
             </div>
+
           </div>
           
         </div>
+        <FontAwesomeIcon icon={faUser} className='text-white bg-black cursor-pointer hover:scale-110 h-6'/>
+
       </div>
 
       <DisclosurePanel className="sm:hidden">
