@@ -1,5 +1,6 @@
 import NavBar from "../NavBar/NavBar"
 import Logo from '../../assets/gameworld_logo-removebg-preview.png'
+import './Login.css'
 
 const Login = () => {
   return (
@@ -13,7 +14,7 @@ const Login = () => {
         ```
       */}
       <NavBar />
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20">
+      <div className="conntainer flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img 
                 src={Logo} 
@@ -70,7 +71,7 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="submit flex w-full justify-center rounded-md bg-pink-500 shadow-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-lg hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Ingresar
               </button>

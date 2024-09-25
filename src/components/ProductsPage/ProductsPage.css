@@ -1,0 +1,8 @@
+.container {
+    background-image: url('../../assets/productsBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+
+}

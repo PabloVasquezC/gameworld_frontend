@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import NavBar from '../NavBar/NavBar'
 import Logo from '../../assets/gameworld_logo-removebg-preview.png'
+import Footer from '../Footer/Footer'
 
 
 
@@ -12,7 +13,7 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className='container'>
       <header className="absolute inset-x-0 top-0 z-50">
         <NavBar />
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -24,7 +25,6 @@ export default function HomePage() {
                 <img
                   alt=""
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
                 />
               </a>
               <button
@@ -111,6 +111,7 @@ export default function HomePage() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import ProductCard from "../ProductCard/ProductCard";
+import './ProductsPage.css';
 
 export default function ProductsPage() {
   const [error, setError] = useState('');
@@ -40,7 +41,7 @@ export default function ProductsPage() {
   return (
     <>
       <NavBar />
-      <div className="bg-white">
+      <div className="container">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 
           {/* Mostrar indicador de carga */}

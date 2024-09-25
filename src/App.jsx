@@ -4,9 +4,12 @@ import Login from './components/Login/Login';
 import ProductsPage from './components/ProductsPage/ProductsPage';
 import SignUp from './components/SignUp/SignUp';
 import OurTeam from './components/OurTeam/OurTeam';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -14,6 +17,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/productsPage" element={<ProductsPage />} />
+        <Route path="/shoppingCart" element={<ShoppingCart />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );

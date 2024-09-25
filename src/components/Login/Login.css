@@ -1,0 +1,6 @@
+.submit {
+    transition: all 0.3s ease;
+    :hover {
+        transition: all 0.3s ease
+    }
+}

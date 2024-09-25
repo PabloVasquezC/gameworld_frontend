@@ -5,6 +5,7 @@ import './NavBar.css'
 import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'  // Asegúrate de que faUser esté importado correctamente
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
   { name: 'Registro', href: '/signUp', current: false },
@@ -20,8 +21,8 @@ function classNames(...classes) {
 export default function NavBar() {
   return (
     <Disclosure as="nav" className="bg-gray-800 w-full navbar flex">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 bg-black  items-center justify-between">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-1 flex justify-between w-full items-center">
+        <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -64,9 +65,18 @@ export default function NavBar() {
             </div>
 
           </div>
-          
         </div>
-        <FontAwesomeIcon icon={faUser} className='text-white bg-black cursor-pointer hover:scale-110 h-6'/>
+        <input type="text" placeholder='Bucar' className='input rounded-md'/>
+
+        <div>
+          <Link to={'/profile'}>
+            <FontAwesomeIcon icon={faUser} className='user-icon mx-3 text-white cursor-pointer rounded-full hover:bg-white hover:text-black hover:p-3 h-6' />
+          </Link>
+          
+          <Link to={'/shoppingCart'}>
+            <FontAwesomeIcon icon={faShoppingCart} className='user-icon text-white cursor-pointer rounded-full hover:bg-white hover:text-black hover:p-3 h-6' />
+          </Link>
+        </div>
 
       </div>
 
