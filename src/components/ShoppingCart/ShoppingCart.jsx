@@ -1,6 +1,10 @@
+// import { useShoppingCartStore } from "../../store/ShoppingCartStore"
 import NavBar from "../NavBar/NavBar"
 
 export default function ShoppingCart() {
+
+    // useShoppingCartStore((state) => state.ShoppingCart, shallow)
+
     return (
         <div>
             <NavBar />

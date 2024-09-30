@@ -18,7 +18,7 @@ export default function ProductsPage() {
       });
       if (response.ok) {
         const products = await response.json();
-        console.log(products);
+        // console.log(products);
         setProducts(products); 
         setLoading(false); // Termina la carga cuando se obtienen los datos
       } else {

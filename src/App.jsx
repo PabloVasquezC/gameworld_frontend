@@ -6,6 +6,7 @@ import SignUp from './components/SignUp/SignUp';
 import OurTeam from './components/OurTeam/OurTeam';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import Profile from './components/Profile/Profile';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/productsPage" element={<ProductsPage />} />
         <Route path="/shoppingCart" element={<ShoppingCart />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
+
       </Routes>
     </Router>
   );

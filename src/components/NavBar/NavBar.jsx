@@ -2,16 +2,16 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
-import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'  // Asegúrate de que faUser esté importado correctamente
+import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'  // Asegúrate de que faUser esté importado correctamente
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
-  { name: 'Registro', href: '/signUp', current: false },
+  // { name: 'Registro', href: '/signUp', current: false },
   { name: 'Productos', href: '/productsPage', current: false },
-  { name: 'Login', href: '/login', current: false }, 
-  { name: 'Nuestro Equipo', href: '/ourTeam', current: false },
+  // { name: 'Login', href: '/login', current: false }, 
+  { name: 'Contacto', href: '/contact', current: false },
+  { name: 'Nosotros', href: '/ourTeam', current: false },
 ]
 
 function classNames(...classes) {
@@ -20,26 +20,24 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 w-full navbar flex">
+    <Disclosure as="nav" className="bg-gray-800 w-full navbar flex h-14">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-1 flex justify-between w-full items-center">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Abrir menú principal</span>
               <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
               <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <Link to="/">
-              <img
-                alt="Your Company"
-                src={Logo}
-                className="h-14 w-auto"
-              />
+              <Link to={'/'}>
+                <FontAwesomeIcon 
+                  icon={faHome} 
+                  className='user-icon mx-3 text-white cursor-pointer hover:text-purple-500 h-6' />
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -66,16 +64,23 @@ export default function NavBar() {
 
           </div>
         </div>
-        <input type="text" placeholder='Bucar' className='input rounded-md'/>
 
-        <div>
-          <Link to={'/profile'}>
-            <FontAwesomeIcon icon={faUser} className='user-icon mx-3 text-white cursor-pointer rounded-full hover:bg-white hover:text-black hover:p-3 h-6' />
-          </Link>
+        <div className='flex'>
+          <input type="text" placeholder='Bucar' className='input rounded-md'/>
           
           <Link to={'/shoppingCart'}>
-            <FontAwesomeIcon icon={faShoppingCart} className='user-icon text-white cursor-pointer rounded-full hover:bg-white hover:text-black hover:p-3 h-6' />
+            <FontAwesomeIcon 
+              icon={faShoppingCart} 
+              className='mx-8 text-white cursor-pointer hover:text-purple-600 h-6 p-2' />
+
           </Link>
+          
+          <Link to={'/profile'}>
+            <FontAwesomeIcon 
+            icon={faUser} 
+            className='user-icon text-white cursor-pointer hover:text-purple-600  h-6 p-2' />
+          </Link>
+          
         </div>
 
       </div>

@@ -6,12 +6,5 @@
     z-index: 1000;
     box-shadow:0px 5px 10px #6e42c191;
     height: auto;
-
-    .user-icon {
-        transition: .3s ease-in-out; 
-        &:hover {
-            transition: .3 ease-in-out;
-        }
-    }
 }
 
