@@ -6,7 +6,7 @@ import './ProductsPage.css';
 export default function ProductsPage() {
   const [error, setError] = useState('');
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado de carga
+  const [loading, setLoading] = useState(true);
 
   const getProducts = async () => {
     try {
@@ -18,19 +18,18 @@ export default function ProductsPage() {
       });
       if (response.ok) {
         const products = await response.json();
-        // console.log(products);
         setProducts(products); 
-        setLoading(false); // Termina la carga cuando se obtienen los datos
+        setLoading(false); 
       } else {
         const errorProduct = await response.json();
         setError(errorProduct.error);
-        setLoading(false); // Termina la carga cuando ocurre un error
+        setLoading(false); 
         console.error(errorProduct.error);
       }
     } catch (error) {
       console.error('Error:', error);
       setError('An error occurred while fetching products');
-      setLoading(false); // Termina la carga cuando ocurre un error
+      setLoading(false); 
     }
   };
 

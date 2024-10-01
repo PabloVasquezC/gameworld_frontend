@@ -1,23 +1,26 @@
-import { useState } from 'react';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useShoppingCartStore } from "../../store/ShoppingCartStore";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export default function ProductCard({ product }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false); // Estado para el modal
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
-  // Función para alternar la descripción
+  const addProductToCart = useShoppingCartStore((state) => state.addProduct);
+
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
 
-  // Función para mostrar el modal
   const handleAddToCart = () => {
-    console.log(product)
+    addProductToCart(product);
     setIsModalVisible(true);
     setTimeout(() => {
       setIsModalVisible(false);
-    }, 2000); // El modal desaparecerá después de 2 segundos
+    }, 2000);
   };
 
   return (
@@ -27,7 +30,7 @@ export default function ProductCard({ product }) {
       <div className="aspect-h-1 aspect-w-1 w-full h-64 overflow-visible relative rounded-t-md bg-gray-200 group-hover:opacity-90">
         <FontAwesomeIcon 
           icon={faCartPlus} 
-          onClick={handleAddToCart} // Llamar a la función que muestra el modal
+          onClick={handleAddToCart} 
           className="user-icon mx-3 text-white cursor-pointer shadow-black shadow-sm hover:shadow-lg z-20 h-8 w-auto bg-green-500 p-2 rounded border border-green-700 translate-x-60 -translate-y-5" 
         />
         <img
@@ -45,12 +48,10 @@ export default function ProductCard({ product }) {
           </a>
         </h3>
 
-        {/* Descripción del producto */}
         <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
           {product.description}
         </p>
 
-        {/* Botón para expandir/contraer la descripción */}
         <button
           onClick={toggleDescription}
           className="mt-2 text-indigo-500 text-sm focus:outline-none hover:underline"
@@ -58,13 +59,11 @@ export default function ProductCard({ product }) {
           {isExpanded ? 'Mostrar menos' : 'Mostrar más'}
         </button>
 
-        {/* Precio */}
         <div className="mt-4 flex justify-between items-center">
           <p className="text-xl font-bold text-gray-900">{product.price}</p>
         </div>
       </div>
 
-      {/* Modal de confirmación de agregado al carrito */}
       {isModalVisible && (
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-green-500 text-white text-sm px-4 py-2 rounded shadow-lg z-30">
           ¡Producto añadido al carrito!
