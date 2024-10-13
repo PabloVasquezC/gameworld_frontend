@@ -2,12 +2,11 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
 import NavBar from '../NavBar/NavBar'
 import Logo from '../../assets/gameworld_logo-removebg-preview.png'
 import Footer from '../Footer/Footer'
 import './HomePage.css'
-import Contact from '../Contact/Contact'
 import Bento from '../BentoSection/BentoSection'
 
 
@@ -15,7 +14,7 @@ export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className=''>
+    <div>
       <header className="absolute inset-x-0 top-0 z-50">
         <NavBar />
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

@@ -10,18 +10,17 @@ import Contact from './components/Contact/Contact';
 
 function App() {
   return (
-    
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ourTeam" element={<OurTeam />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/productsPage" element={<ProductsPage />} />
         <Route path="/shoppingCart" element={<ShoppingCart />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
-
       </Routes>
     </Router>
   );

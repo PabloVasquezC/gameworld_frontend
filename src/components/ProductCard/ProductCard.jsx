@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useShoppingCartStore } from "../../store/ShoppingCartStore";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,6 +6,7 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
+// eslint-disable-next-line react/prop-types
 export default function ProductCard({ product }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);

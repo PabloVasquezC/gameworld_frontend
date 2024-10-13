@@ -1,15 +1,13 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'  // Asegúrate de que faUser esté importado correctamente
+import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
-  // { name: 'Registro', href: '/signUp', current: false },
   { name: 'Productos', href: '/productsPage', current: false },
-  // { name: 'Login', href: '/login', current: false }, 
   { name: 'Contacto', href: '/contact', current: false },
   { name: 'Nosotros', href: '/ourTeam', current: false },
 ]
@@ -75,7 +73,7 @@ export default function NavBar() {
 
           </Link>
           
-          <Link to={'/profile'}>
+          <Link to={'/login'}>
             <FontAwesomeIcon 
             icon={faUser} 
             className='user-icon text-white cursor-pointer hover:text-purple-600  h-6 p-2' />
