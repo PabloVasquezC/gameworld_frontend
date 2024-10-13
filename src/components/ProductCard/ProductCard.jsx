@@ -6,7 +6,6 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
-// eslint-disable-next-line react/prop-types
 export default function ProductCard({ product }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -53,6 +52,10 @@ export default function ProductCard({ product }) {
         <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
           {product.description}
         </p>
+
+        <span className="mt-2 text-gray-500 text-sm">
+          stock disponible: {product.stock}
+        </span>
 
         <button
           onClick={toggleDescription}
