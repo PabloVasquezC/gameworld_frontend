@@ -1,6 +1,8 @@
 import FotoTiendaFisica from "../../assets/frontisTiendaFisica.jpg";
 import FotoArticulosPokemon from "../../assets/articulosPokemon.jpg";
 import FotoJoystickXbox from "../../assets/joystickXbox.jpg";
+import ConsolaVintage from "../../assets/consolaVintage.avif";
+import './BentoSection.css'
 
 export default function Hero() {
   return (
@@ -9,32 +11,23 @@ export default function Hero() {
       <img 
         src={FotoTiendaFisica} 
         className="object-cover bg-pink-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-        
       </img>
       {/* Item 2 */}
       <img
         src={FotoArticulosPokemon}
         className="bg-blue-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-        
       </img>
       {/* Item 3 */}
-      <div className="bg-green-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-        Item 3
-      </div>
+      <img
+        src={ConsolaVintage}
+        className="bg-blue-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
+      </img>
       {/* Item 4 */}
       <img
         src={FotoJoystickXbox}
         className="bg-yellow-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-  
       </img>
-      {/* Item 5 */}
-      <div className="bg-purple-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-        Item 5
-      </div>
-      {/* Item 6 */}
-      <div className="bg-orange-500 h-full rounded-lg flex items-center justify-center text-white text-2xl">
-        Item 6
-      </div>
+      
     </div>
   );
 }

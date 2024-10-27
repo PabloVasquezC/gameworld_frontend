@@ -9,6 +9,13 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 export default function ProductCard({ product }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [stock, setStock] = useState(product.stock);
+
+  const decrementStock = () => {
+    if (stock > 0) {
+      setStock(stock - 1);
+    }
+  }
 
   const addProductToCart = useShoppingCartStore((state) => state.addProduct);
 
@@ -17,11 +24,18 @@ export default function ProductCard({ product }) {
   };
 
   const handleAddToCart = () => {
+    decrementStock();
     addProductToCart(product);
     setIsModalVisible(true);
-    setTimeout(() => {
+    
+    if (stock > 0) {
+      setTimeout(() => {
+        setIsModalVisible(false);
+      }, 2000);
+    } else {
       setIsModalVisible(false);
-    }, 2000);
+    }
+    
   };
 
   return (
@@ -53,8 +67,12 @@ export default function ProductCard({ product }) {
           {product.description}
         </p>
 
+        <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
+          categoria: {product.category}
+        </p>
+
         <span className="mt-2 text-gray-500 text-sm">
-          stock disponible: {product.stock}
+          stock disponible: <span className="font-bold">{stock}</span>
         </span>
 
         <button
@@ -65,7 +83,7 @@ export default function ProductCard({ product }) {
         </button>
 
         <div className="mt-4 flex justify-between items-center">
-          <p className="text-xl font-bold text-gray-900">{product.price}</p>
+          <p className="text-xl font-bold text-gray-900">{product.price} CLP.</p>
         </div>
       </div>
 
@@ -74,6 +92,8 @@ export default function ProductCard({ product }) {
           ¡Producto añadido al carrito!
         </div>
       )}
+
+      
     </div>
   );
 }

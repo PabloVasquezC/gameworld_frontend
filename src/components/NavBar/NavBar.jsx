@@ -35,7 +35,7 @@ export default function NavBar() {
               <Link to={'/'}>
                 <FontAwesomeIcon 
                   icon={faHome} 
-                  className='user-icon mx-3 text-white cursor-pointer hover:text-purple-500 h-6' />
+                  className='user-icon mx-3 text-white cursor-pointer hover:text-purple-500 hidden sm:block h-6' />
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -64,7 +64,7 @@ export default function NavBar() {
         </div>
 
         <div className='flex'>
-          <input type="text" placeholder='Bucar' className='input rounded-md'/>
+          {/* <input type="text" placeholder='Buscar' className='input rounded-md'/> */}
           
           <Link to={'/shoppingCart'}>
             <FontAwesomeIcon 
