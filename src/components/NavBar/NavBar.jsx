@@ -7,6 +7,7 @@ import { faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
+  { name: 'Inicio', href: '/', current: true },
   { name: 'Productos', href: '/productsPage', current: false },
   { name: 'Contacto', href: '/contact', current: false },
   { name: 'Nosotros', href: '/ourTeam', current: false },
