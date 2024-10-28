@@ -3,6 +3,7 @@ import jorgeImage from '../../assets/fotoJorge.jpeg'
 import claudioImage from '../../assets/fotoClaudio.jpeg'
 import nicolasImage from '../../assets/fotoNico.jpeg'
 import fotoPablo from '../../assets/fotoPablo.png'
+import { useState } from 'react'
 
 
 const people = [
@@ -26,10 +27,11 @@ const people = [
         role: 'Programador',
         imageUrl: nicolasImage
       },
-    // More people...
   ]
   
   function OurTeam() {
+    const [loading, setLoading] = useState(true);
+
     return (
       <>
       <NavBar /> 
@@ -38,7 +40,7 @@ const people = [
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nosotros!</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Los creadores de GameWorld son un grupo de estudiantes de INACAP apasionados por la tecnología y los videojuegos.
+              Somos los creadores de GameWorld, un grupo de estudiantes de INACAP apasionados por la tecnología, los videojuegos y los completos.
             </p>
           </div>
           <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">

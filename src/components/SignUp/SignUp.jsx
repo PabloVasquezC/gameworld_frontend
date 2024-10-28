@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Logo from '../../assets/gameworld_logo-removebg-preview.png';
 
@@ -6,6 +5,8 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
+
 
   const validatePasswords = () => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/; // Al menos una mayúscula, un número y un carácter especial

@@ -1,9 +1,9 @@
-// Spinner
+function LoadingSpinner() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  );
+}
 
-export default function Spinner() {
-    return (
-        <div className="flex items-center justify-center h-96">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>
-        </div>
-    );
-    }
+export default LoadingSpinner;

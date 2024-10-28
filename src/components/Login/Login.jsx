@@ -4,6 +4,9 @@ import './Login.css'
 import { Link } from "react-router-dom"
 
 const Login = () => {
+
+  const [loading, setLoading] = useState(true);
+
   return (
     <>
       {/*

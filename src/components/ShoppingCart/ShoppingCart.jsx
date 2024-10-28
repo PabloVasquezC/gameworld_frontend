@@ -5,6 +5,8 @@ import {shallow }from "zustand/shallow"; // Asegúrate de importar shallow si lo
 export default function ShoppingCart() {
   // Obtener los productos en el carrito desde el store
   const shoppingCart = useShoppingCartStore((state) => state.shoppingCart, shallow);
+  const [loading, setLoading] = useState(true);
+
 
   return (
     <div>
