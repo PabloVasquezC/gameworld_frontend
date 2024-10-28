@@ -6,7 +6,8 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
-export default function ProductCard({ product }) {
+export default function ProductCard( {product} ) {
+  
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [stock, setStock] = useState(product.stock);
@@ -22,6 +23,12 @@ export default function ProductCard({ product }) {
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
+
+  const showDataRecived = () => {
+    console.log('productos recibidos', product);
+  };
+
+  showDataRecived();
 
   const handleAddToCart = () => {
     decrementStock();
@@ -39,6 +46,7 @@ export default function ProductCard({ product }) {
   };
 
   return (
+    
     <div key={product.id} className="group relative bg-white shadow-lg rounded-lg overflow-visible transition-transform transform hover:scale-[102%] hover:shadow-2xl cursor-pointer">
       
       {/* Imagen del producto */}
@@ -68,7 +76,7 @@ export default function ProductCard({ product }) {
         </p>
 
         <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
-          categoria: {product.category}
+          categoria: {product.category.name}
         </p>
 
         <span className="mt-2 text-gray-500 text-sm">

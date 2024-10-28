@@ -16,20 +16,19 @@ export default function ProductsPage() {
           'Content-Type': 'application/json',
         },
       });
+
       if (response.ok) {
         const products = await response.json();
         setProducts(products); 
-        setLoading(false); 
       } else {
         const errorProduct = await response.json();
-        setError(errorProduct.error);
-        setLoading(false); 
-        console.error(errorProduct.error);
+        setError(errorProduct.error || 'Failed to load products.');
       }
     } catch (error) {
       console.error('Error:', error);
       setError('An error occurred while fetching products');
-      setLoading(false); 
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -49,13 +48,12 @@ export default function ProductsPage() {
           {/* Mostrar mensaje de error si ocurre */}
           {error && <p className="text-red-500">{error}</p>}
 
-          
-            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-              {products.map((product) => (
-                <ProductCard key={product.name} product={product} />
-              ))}
-            </div>
-          
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          {console.log('mostrando productos en Product page', products)}
         </div>
       </div>
     </>
