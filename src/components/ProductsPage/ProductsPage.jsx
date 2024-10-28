@@ -10,7 +10,7 @@ export default function ProductsPage() {
 
   const getProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/productsPage/', {
+      const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/productsPage/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
