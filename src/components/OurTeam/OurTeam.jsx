@@ -11,7 +11,7 @@ const people = [
     name: 'Claudio',
     role: 'Scrum Master',
     imageUrl: claudioImage,
-    github: 'https://github.com/claudio', 
+    github: 'https://github.com/ClaudioRojasVergara', 
     linkedin: 'https://linkedin.com/in/ClaudioRojasVergara' 
   },
   {
