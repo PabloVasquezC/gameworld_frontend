@@ -27,18 +27,7 @@ function Footer() {
                 />
               </svg>
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <span className="sr-only">Twitter</span>
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                {/* Icono de Twitter */}
-                <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.608 1.794-1.574 2.163-2.723-.949.564-2.002.974-3.127 1.195-.897-.957-2.173-1.555-3.591-1.555-2.717 0-4.918 2.201-4.918 4.917 0 .385.045.76.126 1.124-4.083-.205-7.702-2.16-10.126-5.134-.423.723-.666 1.561-.666 2.475 0 1.708.869 3.213 2.188 4.099-.806-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.828-.413.112-.849.171-1.296.171-.314 0-.622-.03-.921-.086.623 1.945 2.432 3.363 4.575 3.403-1.68 1.318-3.809 2.104-6.115 2.104-.397 0-.787-.023-1.174-.067 2.179 1.398 4.768 2.215 7.548 2.215 9.057 0 14.004-7.506 14.004-14.004 0-.213 0-.425-.015-.636.961-.695 1.8-1.562 2.46-2.549l-.047-.02z" />
-              </svg>
-            </a>
+           
             <a href="#" className="text-gray-400 hover:text-white">
               <span className="sr-only">Instagram</span>
               <svg
@@ -57,9 +46,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-6 text-center text-gray-400 text-sm">
-          © 2024 GameWorld. Todos los derechos reservados.
-        </div>
+        
       </div>
     </footer>
   );

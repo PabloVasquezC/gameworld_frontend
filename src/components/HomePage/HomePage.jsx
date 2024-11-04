@@ -22,6 +22,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <div>
       {loading ? (
         // Spinner de carga
         <div className="flex items-center justify-center min-h-screen">
@@ -89,14 +90,14 @@ export default function HomePage() {
                   className="h-100 w-auto mx-auto my-20 sm:my-0"
                 />
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Cuatro de cada cinco gamers recomiendan GameWorld. Descubre por qué.
+                  &quot;Cuatro de cada cinco gamers recomiendan GameWorld, Descubre las razones.&quot;
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
                     href="#bentos"
-                    className="my-5 rounded-md bg-pink-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="my-5 rounded-md custom-bg-pink px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Explorar <span aria-hidden="true">→</span>
+                    Comenzar <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>
@@ -115,9 +116,10 @@ export default function HomePage() {
             </div>
             <Bento />
           </div>
-          <Footer />
         </>
       )}
+    </div>
+  <Footer />
     </div>
   );
 }

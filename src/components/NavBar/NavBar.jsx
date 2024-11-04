@@ -60,7 +60,7 @@ export default function NavBar() {
 
               </div>
             </div>
-
+          
           </div>
         </div>
 
@@ -104,6 +104,8 @@ export default function NavBar() {
     ))}
   </div>
 </DisclosurePanel>
+<div id="progress"></div>
+
     </Disclosure>
   )
 }
