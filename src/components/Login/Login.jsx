@@ -5,18 +5,9 @@ import { Link } from "react-router-dom"
 
 const Login = () => {
 
-  // const [loading, setLoading] = useState(true);
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <NavBar />
       <div className="conntainer flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
