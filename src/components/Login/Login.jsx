@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const Login = () => {
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   return (
     <>
