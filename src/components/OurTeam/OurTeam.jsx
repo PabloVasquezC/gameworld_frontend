@@ -4,7 +4,6 @@ import claudioImage from '../../assets/fotoClaudio.jpeg';
 import nicolasImage from '../../assets/fotoNico.jpeg';
 import fotoPablo from '../../assets/fotoPablo.png';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useState } from 'react';
 
 const people = [
   {
@@ -53,7 +52,7 @@ function OurTeam() {
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <img alt="" src={person.imageUrl} className="h-20 w-20 rounded-full object-cover" />
+                  <img alt="imagenes-de-miebros-del-equipo" src={person.imageUrl} className="h-20 w-20 rounded-full object-cover shadow-md shadow-black" />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>

@@ -97,7 +97,7 @@ export default function HomePage() {
                     href="#bentos"
                     className="my-5 rounded-md custom-bg-pink px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
-                    Comenzar <span aria-hidden="true">→</span>
+                    Explorar<span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>

@@ -6,7 +6,6 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
 
 
   const validatePasswords = () => {
@@ -35,7 +34,7 @@ function SignUp() {
       };
   
       try {
-        const response = await fetch('http://localhost:8000/api/register/', {
+        const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/signUp/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
