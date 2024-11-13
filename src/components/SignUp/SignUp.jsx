@@ -1,5 +1,6 @@
 import NavBar from '../NavBar/NavBar';
 import Logo from '../../assets/gameworld_logo-removebg-preview.png';
+import { useState } from 'react';
 
 function SignUp() {
   const [password, setPassword] = useState('');
