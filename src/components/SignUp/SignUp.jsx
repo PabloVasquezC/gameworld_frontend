@@ -33,7 +33,7 @@ function SignUp() {
       };
 
       try {
-        const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/signUp/', {
+        const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
