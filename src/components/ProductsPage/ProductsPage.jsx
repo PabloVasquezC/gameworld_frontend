@@ -1,11 +1,22 @@
-import  useProducts  from "../../hooks/useProducts";
+import { useState } from "react";
+import useProducts from "../../hooks/useProducts";
 import NavBar from "../NavBar/NavBar";
 import ProductCard from "./ProductCard/ProductCard";
 import './ProductsPage.css';
 import LoadingSpinner from "../Spinner/Spinner";
+import ProductModal from "./ProductModal/ProductModal"; 
 
 export default function ProductsPage() {
-  const { products, error, loading } = useProducts(); 
+  const { products, error, loading } = useProducts();
+  const [selectedProduct, setSelectedProduct] = useState(null); 
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
 
   return (
     <>
@@ -21,12 +32,17 @@ export default function ProductsPage() {
 
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} onClick={() => openModal(product)} />
             ))}
           </div>
           {console.log('mostrando productos en Product page', products)}
         </div>
       </div>
+
+      {/* Modal para mostrar detalles del producto */}
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={closeModal} />
+      )}
     </>
   );
 }

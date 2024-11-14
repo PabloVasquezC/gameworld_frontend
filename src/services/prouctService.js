@@ -6,7 +6,7 @@ export async function getProducts() {
             'Content-Type': 'application/json',
             },
         });
-    
+
         if (!response.ok) {
             const errorData = await response.json();
             throw new Error(errorData.error || 'Failed to load products.');

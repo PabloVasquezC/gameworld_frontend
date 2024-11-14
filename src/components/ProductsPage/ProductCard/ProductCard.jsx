@@ -6,7 +6,7 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 
-export default function ProductCard( {product} ) {
+export default function ProductCard( {product , onClick} ) {
   
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -47,7 +47,10 @@ export default function ProductCard( {product} ) {
 
   return (
     
-    <div key={product.id} className="group relative bg-white shadow-lg rounded-lg overflow-visible transition-transform transform hover:scale-[102%] hover:shadow-2xl cursor-pointer">
+    <div 
+      onClick={onClick}
+      key={product.id} 
+      className="group relative bg-white shadow-lg rounded-lg overflow-visible transition-transform transform hover:scale-[102%] hover:shadow-2xl cursor-pointer">
       
       {/* Imagen del producto */}
       <div className="aspect-h-1 aspect-w-1 w-full h-64 overflow-visible relative rounded-t-md bg-gray-200 group-hover:opacity-90">

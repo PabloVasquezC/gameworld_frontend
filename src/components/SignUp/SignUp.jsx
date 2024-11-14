@@ -44,7 +44,7 @@ function SignUp() {
         if (response.ok) {
           const data = await response.json();
           console.log(data.message);
-          setError(''); // Limpiar el error en caso de éxito
+          setError('');
         } else {
           const errorData = await response.json();
           console.error(errorData.error);
