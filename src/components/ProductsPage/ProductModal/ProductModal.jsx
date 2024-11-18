@@ -15,7 +15,7 @@ export default function ProductModal({ product, onClose }) {
         <p>{product.description}</p>
         <hr className='my-2 '/>
         <div className='flex justify-around items-center'>
-            <p>Precio: {product.price}</p>
+            <p>Precio: $ {product.price} CLP.</p>
             <FontAwesomeIcon 
                 icon={faCartPlus} 
                 // onClick={handleAddToCart} 

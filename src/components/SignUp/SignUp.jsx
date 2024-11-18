@@ -8,7 +8,7 @@ function SignUp() {
   const [error, setError] = useState('');
 
   const validatePasswords = () => {
-    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/; // Al menos una mayúscula, un número y un carácter especial
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/; 
     if (password.trim() !== confirmPassword.trim()) {
       setError('Las contraseñas no coinciden');
       return false;
