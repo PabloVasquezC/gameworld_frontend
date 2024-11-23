@@ -21,7 +21,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
+    <div className='main-container'>
       <div>
       {loading ? (
         // Spinner de carga
@@ -39,8 +39,8 @@ export default function HomePage() {
                   <a href="#" className="-m-1.5 p-1.5">
                     <span className="sr-only size-11">Game World</span>
                     <img
-                      className="h-11 w-full"
-                      alt=""
+                      className=" h-11 w-full"
+                      alt="gameworld-logo"
                       src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     />
                   </a>
@@ -87,18 +87,21 @@ export default function HomePage() {
                 <img
                   src={Logo}
                   alt="GameWorld Logo"
-                  className="h-100 w-auto mx-auto my-20 sm:my-0"
+                  className="gameworld_logo h-100 w-auto mx-auto my-20 sm:my-0"
                 />
-                <p className="mt-6 text-lg leading-8 text-gray-600">
-                  &quot;Cuatro de cada cinco gamers recomiendan GameWorld, Descubre las razones.&quot;
+                <p className="mt-6 text-2xl text-gray-200 ">
+                  &quot;Cuatro de cada cinco gamers recomiendan <em className='font-bold text-[#ee0979]'>GameWorld</em>, Descubre las razones.&quot;
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <button className='explorar-btn rounded-md flex'>
                   <a
                     href="#bentos"
-                    className="my-5 rounded-md custom-bg-pink px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-md custom-bg-pink px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm "
                   >
                     Explorar<span aria-hidden="true">→</span>
                   </a>
+                  </button>
+                  
                 </div>
               </div>
             </div>
@@ -114,12 +117,12 @@ export default function HomePage() {
                 className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
               />
             </div>
-            <Bento />
           </div>
+            <Bento />
         </>
       )}
     </div>
-  <Footer />
+      <Footer />
     </div>
   );
 }

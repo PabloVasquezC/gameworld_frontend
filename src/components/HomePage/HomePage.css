@@ -1,3 +1,42 @@
+.main-container {
+    background-image: url('../../assets/mark-autumns-GZyt0gMWKxw-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .custom-bg-pink {
-    background: linear-gradient(90deg,blueviolet, #ee0979);
+    background: linear-gradient(90deg, rgb(98, 98, 235), #ee099e);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    transition: background-position 0.2s ease-in-out;
+
+    &:hover {
+        background-position: 100% 50%;
+    }
+}
+.explorar-btn {
+    box-shadow: 0px 3px 4px 2px rgb(110, 32, 125);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 1px 2px 2px rgb(81, 25, 134) ;
+    }
+
+   
+}
+
+.gameworld_logo {
+    animation: upAndDown 1.5s infinite ease-in-out;
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
