@@ -50,10 +50,10 @@ export default function ProductCard( {product , onClick} ) {
     <div 
       onClick={onClick}
       key={product.id} 
-      className="group relative bg-white shadow-lg rounded-lg overflow-visible transition-transform transform hover:scale-[102%] hover:shadow-2xl cursor-pointer">
+      className="group relative bg-gray-800 shadow-lg rounded-lg overflow-visible transition-transform transform hover:scale-[102%] hover:shadow-2xl cursor-pointer">
       
       {/* Imagen del producto */}
-      <div className="aspect-h-1 aspect-w-1 w-full h-64 overflow-visible relative rounded-t-md bg-gray-200 group-hover:opacity-90">
+      <div className="aspect-h-1 aspect-w-1 w-full h-64 overflow-visible relative rounded-t-md  group-hover:opacity-90">
         <img
           alt={product.alt}
           src={product.image}
@@ -63,27 +63,27 @@ export default function ProductCard( {product , onClick} ) {
 
       {/* Información del producto */}
       <div className="p-4 flex flex-col justify-between">
-        <h3 className="text-lg font-semibold text-gray-900">
-          <a href={product.href} className="hover:text-indigo-500 transition-colors">
+        <h3 className="text-lg font-semibold text-indigo-500">
+          <a href={product.href} className="transition-colors">
             {product.name}
           </a>
         </h3>
 
-        <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
+        <p className={`mt-2 text-gray-300 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
           {product.description}
         </p>
 
-        <p className={`mt-2 text-gray-600 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
+        <p className={`mt-2 text-gray-300 text-sm transition-all duration-300 ${isExpanded ? '' : 'truncate'}`}>
           categoria: {product.category.name}
         </p>
 
-        <span className="mt-2 text-gray-500 text-sm">
+        <span className="mt-2 text-gray-300 text-sm">
           stock disponible: <span className="font-bold">{stock}</span>
         </span>
 
         <button
           onClick={toggleDescription}
-          className="mt-2 text-indigo-500 text-sm focus:outline-none hover:underline"
+          className="mt-2 text-blue-500 text-sm focus:outline-none hover:underline"
         >
           {isExpanded ? 'Mostrar menos' : 'Mostrar más'}
         </button>

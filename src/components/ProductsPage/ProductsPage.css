@@ -8,3 +8,43 @@
 
 
 } */
+
+.main-products-container {
+    background-attachment: fixed;
+    background-image: url('../../../src/assets/mark-autumns-GZyt0gMWKxw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.products-page-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Cambia a auto si no necesitas una altura específica */
+    display: flex;
+    align-items: center; /* Alinea tarjetas desde la parte superior */
+}
+
+
+.product-card {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateY(100px);
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

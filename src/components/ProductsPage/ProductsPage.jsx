@@ -21,10 +21,10 @@ export default function ProductsPage() {
   return (
     <>
       <NavBar />
-      <div className="container">
+      <div className="main-products-container">
       <div
               aria-hidden="true"
-              className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+              className=" relative inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             >
               <div
                 style={{
@@ -34,7 +34,7 @@ export default function ProductsPage() {
                 className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
               />
             </div>
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="products-page-container relative mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 
           {/* Mostrar indicador de carga */}
           {loading ? <LoadingSpinner /> : null}
@@ -42,9 +42,14 @@ export default function ProductsPage() {
           {/* Mostrar mensaje de error si ocurre */}
           {error && <p className="text-red-500">{error}</p>}
 
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="products-container mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
-              <ProductCard key={product.id} product={product} onClick={() => openModal(product)} />
+              <div key={product.id} className="product-card">
+                <ProductCard
+                  product={product}
+                  onOpenModal={openModal}
+                />
+              </div>
             ))}
           </div>
           {console.log('mostrando productos en Product page', products)}
