@@ -1,7 +1,6 @@
 import NavBar from "../NavBar/NavBar"
 
 export default function Profile() {
-    const [loading, setLoading] = useState(true);
 
     return (
         <div>
