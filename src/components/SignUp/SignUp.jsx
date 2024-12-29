@@ -27,13 +27,10 @@ function SignUp() {
       const userData = {
         username: e.target.username.value,
         password: password,
-        email: e.target.email.value,
-        phone: e.target.phone.value,
-        address: e.target.address.value,
       };
 
       try {
-        const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/register', {
+        const response = await fetch('http://127.0.0.1:8000/api/register/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -119,36 +116,9 @@ function SignUp() {
               </div>
             </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                Email
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
+            
 
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">
-                Teléfono
-              </label>
-              <div className="mt-2">
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
+            
 
             <div>
               <button

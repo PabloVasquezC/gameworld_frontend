@@ -1,6 +1,6 @@
 export async function getProducts() {
     try {
-        const response = await fetch('https://gameworld-7b4d96ab41b1.herokuapp.com/api/productsPage/', {
+        const response = await fetch('http://127.0.0.1:8000/api/productsPage/', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
