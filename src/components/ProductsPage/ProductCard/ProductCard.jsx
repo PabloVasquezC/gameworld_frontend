@@ -78,6 +78,10 @@ export default function ProductCard( {product , onClick} ) {
         </p>
 
         <span className="mt-2 text-gray-300 text-sm">
+          Precio: <span className="font-bold">${product.price}.000 CLP</span>
+        </span>
+
+        <span className="mt-2 text-gray-300 text-sm">
           stock disponible: <span className="font-bold">{stock}</span>
         </span>
 

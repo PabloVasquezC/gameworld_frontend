@@ -119,10 +119,11 @@ export default function HomePage() {
             </div>
           </div>
             <Bento />
+           
         </>
       )}
+<Footer />
     </div>
-      <Footer />
     </div>
   );
 }

@@ -25,7 +25,7 @@ const people = [
     role: 'Programador Backend',
     imageUrl: fotoPablo,
     github: 'https://github.com/PabloVasquezC',
-    linkedin: 'https://linkedin.com/in/pablovasquez'
+    linkedin: 'https://www.linkedin.com/in/pablo-v%C3%A1squez-corvalan-8569a7267/?originalSubdomain=cl'
   },
   {
     name: 'Nicolas',
