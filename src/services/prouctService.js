@@ -1,6 +1,6 @@
 export async function getProducts() {
     try {
-        const response = await fetch('gameworld-eacnhzaphthmg0g5.canadacentral-01.azurewebsites.net/api/productsPage/', {
+        const response = await fetch('https://gameworldv2.vercel.app/productsPage', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
