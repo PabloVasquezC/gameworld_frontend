@@ -1,6 +1,6 @@
 export async function getProducts() {
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/productsPage/', {
+        const response = await fetch('gameworld-eacnhzaphthmg0g5.canadacentral-01.azurewebsites.net/api/productsPage/', {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',

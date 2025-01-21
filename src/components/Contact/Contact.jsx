@@ -36,7 +36,7 @@ export default function Contact() {
                             <label className="text-white" htmlFor="message">Mensaje</label>
                             <textarea name="message" id="message" className="border-2 border-gray-400 p-2 rounded"></textarea>
                         </div>
-                        <button className="bg- text-white p-2 rounded-md mt-4">Enviar</button>
+                        <button className="bg- text-white p-2 bg-fuchsia-600 rounded-md mt-4">Enviar</button>
                     </div>
                 </form>
             </div>
